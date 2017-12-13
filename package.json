@@ -1,0 +1,39 @@
+{
+  "name": "coin-trader",
+  "version": "0.1.0",
+  "description": "coin trader commander tool",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zlq4863947/coin-trader.git"
+  },
+  "license": "ISC",
+  "bin": {
+    "trader": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "tsc": "rm -rf dist; tsc -p tsconfig.development.json",
+    "tslint": "tslint --project ./tslint.json",
+    "test": "mocha dist/**/*.test.js --timeout 5000 --require intelli-espower-loader",
+    "prepare": "rm -rf dist; tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "commander": "^2.12.2",
+    "node-bitbankcc": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/commander": "^2.12.2",
+    "@types/config": "0.0.33",
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^8.0.47",
+    "@types/power-assert": "^1.4.29",
+    "config": "^1.28.1",
+    "intelli-espower-loader": "^1.0.1",
+    "mocha": "^4.0.1",
+    "power-assert": "^1.4.4",
+    "ts-node": "^4.0.1",
+    "tslint": "^5.6.0",
+    "typescript": "^2.6.2"
+  }
+}
